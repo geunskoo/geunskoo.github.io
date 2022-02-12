@@ -121,6 +121,8 @@ deque는 스택과 큐의 장점을 모두 채택한 것,
 
 #### 재귀함수(recursive function)
 
+
+
 재귀함수는 스택 자료구조를 이용하여 데이터를 처리한다.
 
 
@@ -138,10 +140,162 @@ deque는 스택과 큐의 장점을 모두 채택한 것,
 ### DFS(Depth-Fist-Search)
 ![Depth-First-Search]({{geunskoo.github.io}}/images/2022-02-12-data-structure/Depth-First-Search.gif)
 
-깊이 우선 탐색 알고리즘
+<center>[출처-WIKIMEDIACOMMONS](https://commons.wikimedia.org/wiki/File:Depth-First-Search.gif)</center>
 
 
- **출처**
+
+#### DFS란?
+
+---
+
+>  `깊이 우선 탐색` 알고리즘이다.
+>
+> 위의 gif와 같이 방문하지 않은 노드가 있으면 계속 연결되어 있는 곳으로 깊어지며 탐색하는 알고리즘이다.
+>
+> 원리는 스택(stack)을 이용하여 동작을 한다. 이를 구현하는데 도움을 주는 것은 재귀함수이다.
+>
+> 
+>
+> ***< 예시 >***
+>
+> ```python
+> #위의 gif의 노드들의 연결상태를 리스트로 표현.
+> graph = [[],[2,5,9],[1,3],[2,4],[3],[1,6,8],[5,7],[6],[5],[1,10],[9]]
+> visited = [False]*11 
+> 
+> def dfs(graph,v,visited):
+>     visited[v]=True
+>     print(v,end=' ')
+>     
+>     for i in graph[v]:
+>         if not visited[i]:
+>             dfs(graph,i,visited)
+>             
+> dfs(graph,1,visited)
+> ```
+>
+> ***output***
+>
+> ```python
+> 1 2 3 4 5 6 7 8 9 10
+> ```
+>
+>  
+>
+> 다음과 같이 노드들이 아래쪽부터 탐색 되어짐을 확인할 수 있다.
+
+---
+
+#### 원리
+
+1. dfs 함수는 제일 첫 노드를 읽어드리고 탐색을 한다. 그리고 자신과 인접한(순서상 제일 빠른) 노드를 방문처리한다.
+2. 재귀함수를 이용하여 인접한 노드중 탐색이 되지 않은 곳은 끝없이 탐색을 하며 방문처리를 한다.
+3. 노드 탐색은 정점에 도달하였을 때 제일 깊은 곳의 재귀함수가 빠져나온다.
+4. 3과정을 반복하다 for순회 과정중 아직 탐색을 하지 않은 곳이 있다면 다시 재귀함수가 호출되어 탐색이 되어진다.
+
+따라서 동작의 원리가 **`스택(stack)`**이다.  
+
+---
+
+#### 👍장점
+
++ 단지 현 경로상의 노드들만을 기억하면 되므로 저장공간의 수요가 비교적 적다.
+
++ 목표노드가 깊은 단계에 있을 경우 해를 빨리 구할 수 있다.
+
+#### 👎단점  
+
++ 해가 없는 경로에 깊이 빠질 가능성이 있다.
+
+---
+
+---
+
+
+
+### BFS(Breadth-Fist-Search)
+
+![Breadth-First-Search-Algorithm]({{geunskoo.github.io}}/images/2022-02-12-data-structure/Breadth-First-Search-Algorithm.gif)
+
+<center>[출처-WIKIMEDIACOMMONS](https://commons.wikimedia.org/wiki/File:Breadth-First-Search.gif)</center>
+
+#### BFS란?
+
+---
+
+>  `너비 우선 탐색` 알고리즘이다.
+>
+> 위의 gif와 같이 가까운 노드들 부터 탐색하는 알고리즘이다.
+>
+> 원리는 __큐(Queue)__를 이용하여 동작을 한다. 이를 구현하는데 도움을 주는 것은 큐(Queue)이다.
+>
+> 
+>
+> ***< 예시 >***
+>
+> ```python
+> from collections import deque
+> 
+> graph = [[],[2,3,4],[1,5],[1,6,7],[1,8],[2,9],[3,10],[3],[4],[5],[6]]
+> visited = [False]*11 
+> 
+> def bfs(graph,start,visited):
+>     queue = deque([start])
+>     visited[start] = True
+>     
+>     while queue:
+>         v = queue.popleft()
+>         print(v, end=' ')
+>         
+>         for i in graph[v]:
+>             if not visited[i]:
+>                 queue.append(i)
+>                 visited[i] = True
+> 
+> bfs(graph,1,visited)
+> ```
+>
+> ***output***
+>
+> ```python
+> 1 2 3 4 5 6 7 8 9 10
+> ```
+>
+>  
+>
+> 다음과 같이 가까이 인접한 노드들부터 탐색 되어진다. 
+
+---
+
+#### 원리
+
+1. bfs 함수는 제일 첫 노드를 방문처리한다. 
+2. 첫 노드를 queue에서 꺼냄과 동시에 (방문하지 않은)인접한 노드를 queue에 삽입한다.
+3. queue에서 노드를 하나씩 꺼내며 2.의 과정을 반복한다.
+
+---
+
+#### 👍장점
+
++ 너비를 우선으로 탐색하기 때문에 답이 되는 경로가 여러 개인 경우에도 최단 경로임을 보장할 수 있다. 
++ 노드 수가 적고 깊이가 얕은 해가 존재 할 때 유리하다.
+
+#### 👎단점  
+
++ 큐를 이용해 다음에 탐색 할 노드들을 저장하기 때문에 노드의 수가 많을 수록 필요없는 노드들까지 저장해야 하기 때문에 더 큰 저장공간 필요하다.
++ 노드의 수가 늘어나면 탐색해야하는 노드가 많아지기 때문에 비효율적이다.
+
+---
+
+---
+
+
+
+ **출처/참고**
 
 이것이 코딩 테스트다 - 나동빈 저
+
+https://velog.io/@vagabondms/DFS-vs-BFS
+
 {: .notice--info} 
+
