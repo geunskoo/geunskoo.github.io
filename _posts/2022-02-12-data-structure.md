@@ -292,7 +292,7 @@ deque는 스택과 큐의 장점을 모두 채택한 것,
 
 ### 🔥DFS/BFS 연습문제 
 
-1.  [[백준] DFS와 BFS: 1260번](https://www.acmicpc.net/problem/1260)
+1.  [[백준] DFS와 BFS: 1260번](https://geunskoo.github.io/dfs/bfs/boj-1260) ⚡***clear*** 
 2.  [[백준] 미로탐색: 2178번](https://www.acmicpc.net/problem/2178)
 3.  [[백준] 숨바꼭질: 1697번](https://www.acmicpc.net/problem/1697)
 4.  [[백준] 유기농 배추: 1012번](https://www.acmicpc.net/problem/1012)
