@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "기초 자료구조"
+title:  "[개념]기초 자료구조"
 categories: 
     - DFS/BFS
 tag: [python,자료구조,개념]
