@@ -145,6 +145,8 @@ while True:
 
 기준이 너무 작으면 많이 잘라서 양이 늘어나고, 너무 적게 자르면 양이 줄어드는 것을 원리로 이분탐색을 해주었다.
 
+
+
 <br/>
 
 ## 답안 코드
@@ -169,7 +171,7 @@ while(start <= end) :
   if total < m :
     end = mid - 1
   else :
-    result = mid
+    result = mid        #total 얻은 떡의 양이 요구한바 보다 같거나 클때의 mid값을 계속 갱신해서 result에 저장
     start = mid + 1
 
 print(result)
@@ -192,11 +194,19 @@ print(result)
 
 ### 🌝 Thinking
 
-**답안 코드**와 **나의코드** 비교해보니,
+**답안 코드**와 **나의 코드** 비교해보니,
 
-나의 코드는 start가 end를 뛰어 넘을 때 break를 안걸어두어 만들 수 없는 떡의 길이가 있을 땐  error 나올 것 같다.
+나의 코드는 start가 end를 뛰어 넘을 때 break를 안 걸어 두어 만들 수 없는 떡의 길이가 있을 땐  error 나올 것 같다.
+
++다시 살펴보니 완전히 틀린 코드이다. 떡을 적어도 m이상 가져가고,  최대 높이를 구해야 하기 때문이다.
+
+따라서 아래의 답안 코드 처럼 작성이 되어야 한다.
 
 <br/>
+
+위 문제와 같은 문제 👉 [[백준][python] 2164번: 카드2](https://www.acmicpc.net/problem/2805)
+
+
 
 ## 💡 깨달은 점.
 
