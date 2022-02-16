@@ -1,9 +1,9 @@
 ---
 layout: single
-title:  "[개념]기초 자료구조"
+title:  "[개념]기초 이진 탐색"
 categories: 
-    - DFS/BFS
-tag: [python,자료구조,개념]
+    - binary search
+tag: [python,이진탐색,이분탐색,개념]
 toc: true
 toc_sticky: True
 toc_label: "목차"
@@ -11,15 +11,15 @@ author_profile: false
 sidebar: true
 ---
 
-# 자료구조 기초.
+# 이진 탐색 기초.
 
 ## ✍탐색(search)
 
-* 많은 양의 데이터 중에서 원하는 데이터를 찾는 과정이다.
-
-* 그래프, 트리등 자료 구조안에서 탐색을 하는 문제를 자주 다룬다.
-
-* 대표적인 `탐색 알고리즘(DFS/BFS)`이 있다.
+>* 많은 양의 데이터 중에서 원하는 데이터를 찾는 과정이다.
+>
+>* 그래프, 트리등 자료 구조안에서 탐색을 하는 문제를 자주 다룬다.
+>
+>* 대표적인 `탐색 알고리즘(DFS/BFS)`이 있다.
 
 
 
@@ -29,43 +29,43 @@ sidebar: true
 
 ### 📚 자료구조란 ?
 
- ***데이터를 표현하고 관리하고 처리하기 위한 구조*** 이다.
-
- 그 중 스택 & 큐는 자료구조의 기초 개념이다. 삽입(push)와 삭제( pop)라는 함수로 구성이 되어지고,
-
-  그 외 오버플로우(overflow), 언더플로우(underflow)에 대해서도 고민을 해야한다.
+> ***데이터를 표현하고 관리하고 처리하기 위한 구조*** 이다.
+>
+> 그 중 스택 & 큐는 자료구조의 기초 개념이다. 삽입(push)와 삭제( pop)라는 함수로 구성이 되어지고,
+>
+>  그 외 오버플로우(overflow), 언더플로우(underflow)에 대해서도 고민을 해야한다.
 
 
 
 #### 스택(stack)
 
- 박스를 쌓고 빼는 법과 원리가 유사하다.
-
- 선입후출(Fist In Last Out) / 후입선출(Last In First Out)
-
- ```python
- stack = []
- 
- #삽입(5) - 삽입(2) - 삽입(3) - 삽입(7) - 삭제 - 삽입(1) - 삽입(4) - 삭제()
- stack.append(5)
- stack.append(2)
- stack.append(3)
- stack.append(7)
- stack.pop()
- stack.append(1)
- stack.append(4)
- stack.pop()
- 
- print(stack)
- print(stack[::-1])
- ```
-
- ***output***
-
- ```python
- [5, 2, 3, 1]
- [1, 3, 2, 5]
- ```
+> 박스를 쌓고 빼는 법과 원리가 유사하다.
+>
+> 선입후출(Fist In Last Out) / 후입선출(Last In First Out)
+>
+> ```python
+> stack = []
+> 
+> #삽입(5) - 삽입(2) - 삽입(3) - 삽입(7) - 삭제 - 삽입(1) - 삽입(4) - 삭제()
+> stack.append(5)
+> stack.append(2)
+> stack.append(3)
+> stack.append(7)
+> stack.pop()
+> stack.append(1)
+> stack.append(4)
+> stack.pop()
+> 
+> print(stack)
+> print(stack[::-1])
+> ```
+>
+> ***output***
+>
+> ```python
+> [5, 2, 3, 1]
+> [1, 3, 2, 5]
+> ```
 
 
 
@@ -77,37 +77,37 @@ sidebar: true
 
 #### 큐(queue)
 
- 대기줄의 원리가 유사.
-
- 선입선출(First In First Out)
-
- ```python
- from collection import deque
- 
- #큐(Queue) 구현을 위해 deque 라이브러리 사용
- queue = deque()
- 
- #삽입(5) - 삽입(2) - 삽입(3) - 삽입(7) - 삭제() - 삽입(1) - 삽입(4) - 삭제()
- queue.append(5)
- queue.append(2)
- queue.append(3)
- queue.append(7)
- queue.popleft()
- queue.append(1)
- queue.append(4)
- queue.popleft()
- 
- print(queue)
- queue.reverse()
- print(queue)
- ```
-
- ***output***
-
- ```python
- deque([3, 7, 1, 4])
- deque([4, 1, 3, 7])
- ```
+> 대기줄의 원리가 유사.
+>
+> 선입선출(First In First Out)
+>
+> ```python
+> from collection import deque
+> 
+> #큐(Queue) 구현을 위해 deque 라이브러리 사용
+> queue = deque()
+> 
+> #삽입(5) - 삽입(2) - 삽입(3) - 삽입(7) - 삭제() - 삽입(1) - 삽입(4) - 삭제()
+> queue.append(5)
+> queue.append(2)
+> queue.append(3)
+> queue.append(7)
+> queue.popleft()
+> queue.append(1)
+> queue.append(4)
+> queue.popleft()
+> 
+> print(queue)
+> queue.reverse()
+> print(queue)
+> ```
+>
+> ***output***
+>
+> ```python
+> deque([3, 7, 1, 4])
+> deque([4, 1, 3, 7])
+> ```
 
 
 
@@ -148,41 +148,41 @@ deque는 스택과 큐의 장점을 모두 채택한 것,
 
 ---
 
-  `깊이 우선 탐색` 알고리즘이다.
-
- 위의 gif와 같이 방문하지 않은 노드가 있으면 계속 연결되어 있는 곳으로 깊어지며 탐색하는 알고리즘이다.
-
- 원리는 스택(stack)을 이용하여 동작을 한다. 이를 구현하는데 도움을 주는 것은 재귀함수이다.
-
- 
-
- ***< 예시 >***
-
- ```python
- #위의 gif의 노드들의 연결상태를 리스트로 표현.
- graph = [[],[2,5,9],[1,3],[2,4],[3],[1,6,8],[5,7],[6],[5],[1,10],[9]]
- visited = [False]*11 
- 
- def dfs(graph,v,visited):
-     visited[v]=True
-     print(v,end=' ')
-     
-     for i in graph[v]:
-         if not visited[i]:
-             dfs(graph,i,visited)
-             
- dfs(graph,1,visited)
- ```
-
- ***output***
-
- ```python
- 1 2 3 4 5 6 7 8 9 10
- ```
-
-  
-
- 다음과 같이 노드들이 아래쪽부터 탐색 되어짐을 확인할 수 있다.
+>  `깊이 우선 탐색` 알고리즘이다.
+>
+> 위의 gif와 같이 방문하지 않은 노드가 있으면 계속 연결되어 있는 곳으로 깊어지며 탐색하는 알고리즘이다.
+>
+> 원리는 스택(stack)을 이용하여 동작을 한다. 이를 구현하는데 도움을 주는 것은 재귀함수이다.
+>
+> 
+>
+> ***< 예시 >***
+>
+> ```python
+> #위의 gif의 노드들의 연결상태를 리스트로 표현.
+> graph = [[],[2,5,9],[1,3],[2,4],[3],[1,6,8],[5,7],[6],[5],[1,10],[9]]
+> visited = [False]*11 
+> 
+> def dfs(graph,v,visited):
+>     visited[v]=True
+>     print(v,end=' ')
+>     
+>     for i in graph[v]:
+>         if not visited[i]:
+>             dfs(graph,i,visited)
+>             
+> dfs(graph,1,visited)
+> ```
+>
+> ***output***
+>
+> ```python
+> 1 2 3 4 5 6 7 8 9 10
+> ```
+>
+>  
+>
+> 다음과 같이 노드들이 아래쪽부터 탐색 되어짐을 확인할 수 있다.
 
 ---
 
@@ -223,47 +223,47 @@ deque는 스택과 큐의 장점을 모두 채택한 것,
 
 ---
 
-  `너비 우선 탐색` 알고리즘이다.
-
- 위의 gif와 같이 가까운 노드들 부터 탐색하는 알고리즘이다.
-
- 원리는 __큐(Queue)__를 이용하여 동작을 한다. 이를 구현하는데 도움을 주는 것은 큐(Queue)이다.
-
- 
-
- ***< 예시 >***
-
- ```python
- from collections import deque
- 
- graph = [[],[2,3,4],[1,5],[1,6,7],[1,8],[2,9],[3,10],[3],[4],[5],[6]]
- visited = [False]*11 
- 
- def bfs(graph,start,visited):
-     queue = deque([start])
-     visited[start] = True
-     
-     while queue:
-         v = queue.popleft()
-         print(v, end=' ')
-         
-         for i in graph[v]:
-             if not visited[i]:
-                 queue.append(i)
-                 visited[i] = True
- 
- bfs(graph,1,visited)
- ```
-
- ***output***
-
- ```python
- 1 2 3 4 5 6 7 8 9 10
- ```
-
-  
-
- 다음과 같이 가까이 인접한 노드들부터 탐색 되어진다. 
+>  `너비 우선 탐색` 알고리즘이다.
+>
+> 위의 gif와 같이 가까운 노드들 부터 탐색하는 알고리즘이다.
+>
+> 원리는 __큐(Queue)__를 이용하여 동작을 한다. 이를 구현하는데 도움을 주는 것은 큐(Queue)이다.
+>
+> 
+>
+> ***< 예시 >***
+>
+> ```python
+> from collections import deque
+> 
+> graph = [[],[2,3,4],[1,5],[1,6,7],[1,8],[2,9],[3,10],[3],[4],[5],[6]]
+> visited = [False]*11 
+> 
+> def bfs(graph,start,visited):
+>     queue = deque([start])
+>     visited[start] = True
+>     
+>     while queue:
+>         v = queue.popleft()
+>         print(v, end=' ')
+>         
+>         for i in graph[v]:
+>             if not visited[i]:
+>                 queue.append(i)
+>                 visited[i] = True
+> 
+> bfs(graph,1,visited)
+> ```
+>
+> ***output***
+>
+> ```python
+> 1 2 3 4 5 6 7 8 9 10
+> ```
+>
+>  
+>
+> 다음과 같이 가까이 인접한 노드들부터 탐색 되어진다. 
 
 ---
 

@@ -43,29 +43,29 @@ use_math: true
 
 <br/>
 
-> 파이썬을 이용한 구현
->
-> ```python
-> # 선택정렬
-> num = [5,8,1,7,9,2,4,6,3,10]
-> 
-> for i in range(len(num)):
->     min_index = i
->     for j in range(i+1,len(num)):
->         if num[min_index] > num[j]:
->             min_index = j
-> 	#스와프
->     num[min_index], num[i] = num[i], num[min_index]
-> 
-> #출력
-> num
-> ```
->
-> ***>>output***
->
-> ```python
-> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-> ```
+ 파이썬을 이용한 구현
+
+ ```python
+ # 선택정렬
+ num = [5,8,1,7,9,2,4,6,3,10]
+ 
+ for i in range(len(num)):
+     min_index = i
+     for j in range(i+1,len(num)):
+         if num[min_index] > num[j]:
+             min_index = j
+ 	#스와프
+     num[min_index], num[i] = num[i], num[min_index]
+ 
+ #출력
+ num
+ ```
+
+ ***>>output***
+
+ ```python
+ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ ```
 
 ---
 
@@ -90,52 +90,27 @@ use_math: true
 
 <br/>
 
-> 파이썬을 이용한 구현
->
-> ```python
-> # 삽입정렬
-> num = [5,8,1,7,9,2,4,6,3,10]
-> 
-> for i in range(1,len(num)):
->     for j in range(i,0,-1):
->      	if num[j] < num[j-1]:
->             num[j],num[j-1] = num[j-1],num[j]
-> #출력
-> num      
-> ```
->
->  ***>>output***
-> 
->  ```python
->  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
- <br/>
+ 파이썬을 이용한 구현
 
- <br/>
+ ```python
+ # 삽입정렬
+ num = [5,8,1,7,9,2,4,6,3,10]
+ 
+ for i in range(1,len(num)):
+     for j in range(i,0,-1):
+      	if num[j] < num[j-1]:
+             num[j],num[j-1] = num[j-1],num[j]
+ #출력
+ num      
+ ```
 
-> 파이썬을 이용한 구현
->
-> ```python
-> # 삽입정렬
-> num = [5,8,1,7,9,2,4,6,3,10]
-> 
-> for i in range(1,len(num)):
->  for j in range(i,0,-1):
->   	if num[j] < num[j-1]:
->          num[j],num[j-1] = num[j-1],num[j]
-> #출력
-> num      
-> ```
->
-> ***>>output***
->
-> ```python
-> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-> ```
+  ***>>output***
 
- <br/>
+```python
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
 
- <br/>
-
+<br/>
  <br/>
 
 ## 3️⃣ ***버블 정렬***
@@ -150,26 +125,25 @@ use_math: true
 2. 이 작업을 1회전하면 데이터중 가장 큰값은 제일 뒤로간다.
 3. . . . . (반복) . . . .
 
-> 파이썬을 이용한 구현
->
-> ```python
-> # 버블정렬
-> num = [5,8,1,7,9,2,4,6,3,10]
-> 
-> for i in range(len(num)-1):
->     for j in range(len(num)-1-i):
->         if num[j] > num[j+1]:
->             num[j],num[j+1] = num[j+1],num[j]
-> #출력
-> num      
-> ```
->
-> ***>>output***
->
-> ```python
-> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-> ```
+ 파이썬을 이용한 구현
 
+ ```python
+ # 버블정렬
+ num = [5,8,1,7,9,2,4,6,3,10]
+ 
+ for i in range(len(num)-1):
+     for j in range(len(num)-1-i):
+         if num[j] > num[j+1]:
+             num[j],num[j+1] = num[j+1],num[j]
+ #출력
+ num      
+ ```
+
+ ***>>output***
+
+ ```python
+ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ ```
  <br/>
 
  <br/>
@@ -192,73 +166,72 @@ use_math: true
 
 
 
-> 파이썬을 이용한 구현
->
-> ```python
-> #퀵정렬
-> num = [5,8,1,7,9,2,4,6,3,10]
-> 
-> def quick_sort(num,start,end):
->  if start >= end:
->      return
->  pivot = start
->  left = start+1
->  right = end
->  while left <= right: 
->      #피벗보다 작은 값의 인덱스를 찾을 때 까지 반복
->      while left <= end and num[left] <= num[pivot]:
->          left+=1
->      #피벗보다 큰 값의 인덱스를 찾을 때 까지 반복
->      while right > start and num[right] >= num[pivot]:
->          right-=1
->      # 인덱스가 엇갈린다면?
->      if left > right:
->         num[right],num[pivot] = num[pivot],num[right]
->      else:
->          num[left],num[right] = num[right],num[left]
->  quick_sort(num,start,right-1)
->  quick_sort(num,right+1,end)
-> 
-> quick_sort(num,0,len(num)-1)
-> num
-> ```
-> ***>>output***
->
-> ```python
-> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-> ```
+ 파이썬을 이용한 구현
+
+ ```python
+ #퀵정렬
+ num = [5,8,1,7,9,2,4,6,3,10]
+ 
+ def quick_sort(num,start,end):
+  if start >= end:
+      return
+  pivot = start
+  left = start+1
+  right = end
+  while left <= right: 
+      #피벗보다 작은 값의 인덱스를 찾을 때 까지 반복
+      while left <= end and num[left] <= num[pivot]:
+          left+=1
+      #피벗보다 큰 값의 인덱스를 찾을 때 까지 반복
+      while right > start and num[right] >= num[pivot]:
+          right-=1
+      # 인덱스가 엇갈린다면?
+      if left > right:
+         num[right],num[pivot] = num[pivot],num[right]
+      else:
+         num[left],num[right] = num[right],num[left]
+  quick_sort(num,start,right-1)
+  quick_sort(num,right+1,end)
+ 
+ quick_sort(num,0,len(num)-1)
+ num
+ ```
+ ***>>output***
+
+ ```python
+ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ ```
 ---
 
 ---
 
 
 
-> 파이썬의 장점을 살린 퀵정렬
->
-> ```python
-> #퀵정렬
->  num = [5,8,1,7,9,2,4,6,3,10]
->  
->  def quick(num):
->   if len(num) <= 1:
->       return num
->      pivot = num[0]
->     	tail = num[1:]
->     
->   left_side = [x for x in tail if x <= pivot]
->       right_side = [x for x in tail if x > pivot]
->     
->     return quick(left_side)+[pivot]+quick(right_side)
->      
->     quick(num)
-> ```
->
-> ***>>output***
->
-> ```python
-> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-> ```
+ 파이썬의 장점을 살린 퀵정렬
 
+ ```python
+ #퀵정렬
+  num = [5,8,1,7,9,2,4,6,3,10]
+  
+ def quick(num):
+   if len(num) <= 1:
+       return num
+      pivot = num[0]
+     	tail = num[1:]
+     
+   left_side = [x for x in tail if x <= pivot]
+       right_side = [x for x in tail if x > pivot]
+     
+     return quick(left_side)+[pivot]+quick(right_side)
+      
+     quick(num)
+ ```
+
+ ***>>output***
+
+ ```python
+ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ ```
 <br/>
 
 <br/>
@@ -277,36 +250,36 @@ use_math: true
 2. 위에서 만든 리스트값에 등장하는 데이터수를 저장합니다.
 3. 차례로 리스트의 인덱스를 값의 크기만큼 반복하여 나타냅니다.
 
-> 파이썬을 이용한 구현
->
-> ```python
-> #계수 정렬
-> num = [5,8,1,7,9,2,4,6,3,10]
-> 
-> counter = [0]*max(num)+1
-> 
-> for i in num:
->     counter[num] += 1
-> for i in range(max(num)+1):
->     if counter[i]!=0:
->         for j in range(counter[i]):
->             print(i)
-> ```
->
-> ***>>output***
->
-> ```python
-> 1
-> 2
-> 3
-> 4
-> 5
-> 6
-> 7
-> 8
-> 9
-> 10
-> ```
+ 파이썬을 이용한 구현
+
+ ```python
+ #계수 정렬
+ num = [5,8,1,7,9,2,4,6,3,10]
+ 
+ counter = [0]*max(num)+1
+ 
+ for i in num:
+     counter[num] += 1
+ for i in range(max(num)+1):
+     if counter[i]!=0:
+         for j in range(counter[i]):
+             print(i)
+ ```
+
+ ***>>output***
+
+ ```python
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+ 10
+ ```
 
 ---
 
