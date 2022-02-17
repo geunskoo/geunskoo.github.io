@@ -204,9 +204,11 @@ print(result)
 
 <br/>
 
-위 문제와 같은 문제 👉 [[백준][python] 2164번: 카드2](https://www.acmicpc.net/problem/2805)
+## 🔥 위 문제와 유사한 문제
 
+👉 [[백준][python] 2164번: 카드2](https://www.acmicpc.net/problem/2805)
 
+👉 [[백준][python] 1654번: 랜선 자르기](https://www.acmicpc.net/problem/1654)
 
 ## 💡 깨달은 점.
 
