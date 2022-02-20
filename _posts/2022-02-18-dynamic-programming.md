@@ -211,9 +211,7 @@ print(d[i])
 >  DP에 대해서 어느정도 익숙해진 사람들을 위한 많은 사람들이 푼 검증된 좋은 문제들 모음
 
 1. [[백준] 1562번: 계단수](https://www.acmicpc.net/problem/1562)
-
 2. [[백준] 11570번: 환상의 듀엣](https://www.acmicpc.net/problem/11570)
-
 3. [[백준] 2618번: 경찰차](https://www.acmicpc.net/problem/2618)
 4. [[백준] 6989번: 채점](https://www.acmicpc.net/problem/6989)
 5. [[백준] 2315번: 가로등 끄기](https://www.acmicpc.net/problem/2315)
