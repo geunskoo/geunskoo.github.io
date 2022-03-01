@@ -71,14 +71,14 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "class2++" %}
-                        <li><a href="/categories/class2" class="">class2++ ({{category[1].size}})</a></li>
+                        <li><a href="/categories/class2" class="">solved.class2++ ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "class3++" %}
-                        <li><a href="/categories/class3" class="">class3++ ({{category[1].size}})</a></li>
+                        <li><a href="/categories/class3" class="">solved.class3++ ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
