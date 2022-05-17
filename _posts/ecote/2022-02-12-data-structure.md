@@ -294,13 +294,13 @@ deque는 스택과 큐의 장점을 모두 채택한 것,
 
 1.  [[백준] DFS와 BFS: 1260번](https://geunskoo.github.io/dfs/bfs/boj-1260) ⚡***clear*** 
 2.  [[백준] 미로탐색: 2178번](https://geunskoo.github.io/dfs/bfs/boj-2178) ⚡***clear*** 
-3.  [[백준] 숨바꼭질: 1697번](https://www.acmicpc.net/problem/1697)
-4.  [[백준] 유기농 배추: 1012번](https://www.acmicpc.net/problem/1012)
-5.  [[백준] 연결 요소의 개수: 11724번](https://www.acmicpc.net/problem/11724)
-6.  [[백준] 단지번호붙이기: 2667번](https://www.acmicpc.net/problem/2667)
-7.  [[백준] 로또: 6603번](https://www.acmicpc.net/problem/6603)
-8.  [[백준] 토마토: 7576번](https://www.acmicpc.net/problem/7576)
-9.  [[백준] 나이트의 이동: 7562번](https://www.acmicpc.net/problem/7562)
+3.  [[백준] 숨바꼭질: 1697번](https://www.acmicpc.net/problem/1697) ⚡***clear*** 
+4.  [[백준] 유기농 배추: 1012번](https://www.acmicpc.net/problem/1012) ⚡***clear*** 
+5.  [[백준] 연결 요소의 개수: 11724번](https://www.acmicpc.net/problem/11724) ⚡***clear*** 
+6.  [[백준] 단지번호붙이기: 2667번](https://www.acmicpc.net/problem/2667) ⚡***clear*** 
+7.  [[백준] 로또: 6603번](https://www.acmicpc.net/problem/6603) ⚡***clear*** 
+8.  [[백준] 토마토: 7576번](https://www.acmicpc.net/problem/7576) ⚡***clear*** 
+9.  [[백준] 나이트의 이동: 7562번](https://www.acmicpc.net/problem/7562) ⚡***clear*** 
 
 
 
