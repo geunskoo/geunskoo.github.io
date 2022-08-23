@@ -10,14 +10,29 @@
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C-->
+        <span class="nav__sub-title">My story </span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "small talk" %}
+                        <li><a href="/categories/smalltalk" class="">Small Talk ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "book" %}
+                        <li><a href="/categories/kotlin" class="">Book ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         <span class="nav__sub-title">Android </span>
-        <ul>
-            {% for category in site.categories %}
-                {% if category[0] == "kotlin" %}
-                    <li><a href="/categories/kotlin" class="">Kotlin ({{category[1].size}})</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "kotlin" %}
+                        <li><a href="/categories/kotlin" class="">Kotlin ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
 
         <span class="nav__sub-title">Basic Algorithm </span>
             <ul>
