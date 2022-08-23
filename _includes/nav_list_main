@@ -10,6 +10,9 @@
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C-->
+
+
+        <!-- 나의 이야기 -->
         <span class="nav__sub-title">My story </span>
             <ul>
                 {% for category in site.categories %}
@@ -25,6 +28,9 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+        
+
+        <!-- 안드로이드 -->
         <span class="nav__sub-title">Android </span>
             <ul>
                 {% for category in site.categories %}
@@ -34,28 +40,10 @@
                 {% endfor %}
             </ul>
 
+
+        <!-- 알고리즘 -->
         <span class="nav__sub-title">Basic Algorithm </span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "greedy" %}
-                        <li><a href="/categories/greedy" class="">[Basic] Greedy ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "implementation" %}
-                        <li><a href="/categories/implementation" class="">[Basic] Implementation ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "DFS/BFS" %}
-                        <li><a href="/categories/dfsbfs" class="">[Basic] DFS/BFS ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
+
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "sort" %}
@@ -65,8 +53,31 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "greedy" %}
+                        <li><a href="/categories/greedy" class="">[Basic] Greedy ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "DFS/BFS" %}
+                        <li><a href="/categories/dfsbfs" class="">[Basic] DFS/BFS ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "binary search" %}
                         <li><a href="/categories/binary" class="">[Basic] BinarySearch ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "implementation" %}
+                        <li><a href="/categories/implementation" class="">[Basic] Implementation ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
