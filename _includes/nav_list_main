@@ -10,18 +10,27 @@
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C-->
-        <span class="nav__sub-title">기초 알고리즘 </span>
+        <span class="nav__sub-title">Android </span>
+        <ul>
+            {% for category in site.categories %}
+                {% if category[0] == "kotlin" %}
+                    <li><a href="/categories/kotlin" class="">Kotlin ({{category[1].size}})</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        <span class="nav__sub-title">Basic Algorithm </span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "greedy" %}
-                        <li><a href="/categories/greedy" class="">그리디 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/greedy" class="">Greedy ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "implementation" %}
-                        <li><a href="/categories/implementation" class="">구현 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/implementation" class="">Implementation ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -35,60 +44,61 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "sort" %}
-                        <li><a href="/categories/sort" class="">정렬 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/sort" class="">Sort ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "binary search" %}
-                        <li><a href="/categories/binary" class="">이진 탐색 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/binary" class="">BinarySearch ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "dynamic programming" %}
-                        <li><a href="/categories/dynamic" class="">동적 프로그래밍 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/dynamic" class="">DynamicProgramming ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Shortest path problem" %}
-                        <li><a href="/categories/shortest" class="">최단 경로 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/shortest" class="">ShortestPath ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "graph theory" %}
-                        <li><a href="/categories/graph" class="">그래프 이론 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/graph" class="">GraphTheory ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-        <span class="nav__sub-title">백준/프로그래머스 </span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "class2++" %}
-                        <li><a href="/categories/class2" class="">BOJ class2 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/class2" class="">[BOJ] class2++ ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "class3++" %}
-                        <li><a href="/categories/class3" class="">BOJ class3 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/class3" class="">[BOJ] class3++ ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Programmers" %}
-                        <li><a href="/categories/programmers" class="">프로그래머스 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/programmers" class="">Programmers ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
+        <span class="nav__sub-title">CS </span>
+            
       </li>
   </ul>
 </nav>
