@@ -38,56 +38,56 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "greedy" %}
-                        <li><a href="/categories/greedy" class="">Greedy ({{category[1].size}})</a></li>
+                        <li><a href="/categories/greedy" class="">[Basic] Greedy ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "implementation" %}
-                        <li><a href="/categories/implementation" class="">Implementation ({{category[1].size}})</a></li>
+                        <li><a href="/categories/implementation" class="">[Basic] Implementation ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "DFS/BFS" %}
-                        <li><a href="/categories/dfsbfs" class="">DFS/BFS ({{category[1].size}})</a></li>
+                        <li><a href="/categories/dfsbfs" class="">[Basic] DFS/BFS ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "sort" %}
-                        <li><a href="/categories/sort" class="">Sort ({{category[1].size}})</a></li>
+                        <li><a href="/categories/sort" class="">[Basic] Sort ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "binary search" %}
-                        <li><a href="/categories/binary" class="">BinarySearch ({{category[1].size}})</a></li>
+                        <li><a href="/categories/binary" class="">[Basic] BinarySearch ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "dynamic programming" %}
-                        <li><a href="/categories/dynamic" class="">DynamicProgramming ({{category[1].size}})</a></li>
+                        <li><a href="/categories/dynamic" class="">[Basic] DynamicProgramming ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Shortest path problem" %}
-                        <li><a href="/categories/shortest" class="">ShortestPath ({{category[1].size}})</a></li>
+                        <li><a href="/categories/shortest" class="">[Basic] ShortestPath ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "graph theory" %}
-                        <li><a href="/categories/graph" class="">GraphTheory ({{category[1].size}})</a></li>
+                        <li><a href="/categories/graph" class="">[Basic] GraphTheory ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
