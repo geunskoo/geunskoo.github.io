@@ -28,7 +28,15 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-        
+        <!-- CS -->
+        <span class="nav__sub-title">CS </span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "OS" %}
+                        <li><a href="/categories/os" class="">OS ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
 
         <!-- 안드로이드 -->
         <span class="nav__sub-title">Android </span>
@@ -123,7 +131,7 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-        <span class="nav__sub-title">CS </span>
+       
             
       </li>
   </ul>
