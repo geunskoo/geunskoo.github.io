@@ -24,11 +24,11 @@ use_math: true
 
 ## 2️⃣  <span style = "color:#2D3748;background-color:#fff5b1;">프로세스 상태</span>
 
-<span style = "color:red">엄마( 스케줄러 ) : " 나와서 밥(CPU)먹어라!! "</span>
+> 엄마( 스케줄러 ) : " 나와서 밥(CPU)먹어라!! "
+>
+> 나 (프로세스) : " 나 게임 중 !!  할 거 없는 형(프로세스) 먼저 줘 ~ "
 
-<span style = "color:red">나 (프로세스) : " 나 게임 중 !!  할 거 없는 형(프로세스) 먼저 줘 ~ "</span>
-
-<span style="font-size:60%"> 밥은 무한리필되는 한 공기... 노잼인 듯ㅋㅋ </span>
+<span style="font-size:60%"> 밥은 무한리필되는 한 공기... 노잼인 듯ㅋㅋ </span>
 
 <br/>
 
@@ -58,7 +58,9 @@ CPU제어권을 아무 프로세스에게 줄 수 없다. 왜냐하면 CPU제어
 
  **시분할 시스템 환경**에서는 CPU를 한 프로세스가 독점하는 것을 방지하기 위해 Time Interrupt를 이용하여 CPU제어권을 사용자 프로세스에서 빼앗는다. CPU제어권은 커널에게 넘어가며, 커널은 Ready상태의 프로세스에 CPU를 다시 넘겨준다. 그리고 다시 처음의 프로세스가 CPU제어권을 받으면 명령 수행을 재개한다. 
 
-<span style="font-size:90%"><span style = "color:red">CPU : " 그런데 내가.. 어디까지 문제를 풀었더라?  프로세스 문맥을 확인해야겠군..."</span></span>
+<br/>
+
+>  CPU : " 그런데 내가.. 어디까지 문제를 풀었더라?  프로세스 문맥을 확인해야겠군..."
 
 <br/>
 
