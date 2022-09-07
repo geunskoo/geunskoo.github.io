@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[Operating System] 컴퓨터 시스템의 동작 원리"
+title: "[Operating System] 컴퓨터 시스템의 개요"
 categories: 
     - OS
 tag: ['운영체제','OS','컴퓨터 시스템']
@@ -12,7 +12,7 @@ sidebar: true
 use_math: true
 ---
 
-# 🚀 컴퓨터 시스템의 동작 원리
+# 🚀 컴퓨터 시스템의 개요
 
 ## 1️⃣  <span style = "color:#2D3748;background-color:#fff5b1;">컴퓨터 시스템의 구조</span>
 
