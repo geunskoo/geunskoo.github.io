@@ -14,7 +14,7 @@ use_math: true
 
 # 🚀 컴퓨터 시스템의 동작 원리
 
-## 1️⃣  <span style = "color:#2D3748;background-color:#fff5b1;">컴퓨터 시스템의 구조</span>
+## 1️⃣  컴퓨터 시스템의 구조
 
 ![image-20220828153018141](../../images/2022-08-28-os-computer-system/image-20220828153018141.png)
 
@@ -38,7 +38,7 @@ CPU가 각 장치의 로컬버퍼를 일일이 확인하는 것이 아니다.
 
 <br/>
 
-## 2️⃣  <span style = "color:#2D3748;background-color:#fff5b1;">인터럽트</span>
+## 2️⃣  인터럽트
 
 CPU 는 매시점 메모리에서 명령(Instruction)을 하나씩 읽어 와서 수행. 
 
@@ -90,7 +90,7 @@ CPU는 명령(Instruction)하나를 수행할 때마다 인트럽트가 발생�
 
 <br/>
 
-## 3️⃣  <span style = "color:#2D3748;background-color:#fff5b1;">입출력 구조</span>
+## 3️⃣  입출력 구조
 
 <span style = "color:blue">**동기식 입출력( Synchronous I/O )**</span> : 프로그램이 I/O요청을 했을 때,  I/O 작업이 완료되어야 다음 작업을 할 수 있는 방식.
 
@@ -141,7 +141,7 @@ CPU는 명령(Instruction)하나를 수행할 때마다 인트럽트가 발생�
 
 <br/>
 
-## 4️⃣  <span style = "color:#2D3748;background-color:#fff5b1;">DMA</span>
+## 4️⃣  DMA
 
 원칙적으로 메모리(Memory)는 CPU에 의해서만 접근할 수 있는 장치이다.
 
@@ -161,7 +161,7 @@ CPU는 명령(Instruction)하나를 수행할 때마다 인트럽트가 발생�
 
 <br/>
 
-## 5️⃣ <span style = "color:#2D3748;background-color:#fff5b1;">저장장치의 계층구조</span>
+## 5️⃣ 저장장치의 계층구조
 
 <img src="../../images/2022-08-28-os-computer-system/image-20220828213827418.png" alt="image-20220828213827418" style="zoom:100%;" />
 
@@ -192,7 +192,7 @@ CPU는 명령(Instruction)하나를 수행할 때마다 인트럽트가 발생�
 
 <br/>
 
-## 6️⃣ <span style = "color:#2D3748;background-color:#fff5b1;">보안</span>
+## 6️⃣ 보안
 
 **<span style = "color:#2D3748;background-color:#dcffe4; font-size:150%">하드웨어 보안</span>**
 
