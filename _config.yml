@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "da
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "GEUN's NOTE"
+title                    : "geunskoo 기술 블로그"
 title_separator          : "|"
-subtitle                 : "Let's focus on increasing the diameter of the circle! 🌏"
+subtitle                 : ""
 name                     : "geunskoo note"
-description              : "근이의 공부기록 입니다!"
+description              : "근이의 기술 블로그!"
 url                      : "https://geunskoo.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "geunskoo/geunskoo.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -102,15 +102,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "geunskoo"
+  name             : "김태근"
   avatar           : /assets/images/프로필.jpg
-  bio              : "PNU Mathematics 🪐"
+  bio              : "PNU Mathematics & Computer Science"
   location         : "Busan"
-  email            : "oryukdo3@naver.com"
+  email            : "oryukdo3@pusan.ac.kr"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      #url: "mailto:oryukdo3@naver.com"
+      url: "mailto:oryukdo3@pusan.ac.kr"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
