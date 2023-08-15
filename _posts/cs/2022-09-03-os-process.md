@@ -2,7 +2,7 @@
 layout: single
 title: "[Operating System] 프로세스는 어떻게 다루어지는가?"
 categories: 
-    - OS
+    - 운영체제
 tag: ['운영체제','OS','프로세스']
 toc: true
 toc_sticky: True

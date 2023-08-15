@@ -2,7 +2,7 @@
 layout: single
 title: "[Operating System] 컴퓨터 시스템의 개요"
 categories: 
-    - OS
+    - 운영체제
 tag: ['운영체제','OS','컴퓨터 시스템']
 toc: true
 toc_sticky: True

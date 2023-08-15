@@ -2,7 +2,7 @@
 layout: single
 title: "[Operating System] 단기 스케줄러 CPU 스케줄링!"
 categories: 
-    - OS
+    - 운영체제
 tag: ['운영체제','OS','CPU','CPU스케줄러']
 toc: true
 toc_sticky: True

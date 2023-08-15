@@ -2,7 +2,7 @@
 layout: single
 title:  "[개념]기초 이진 탐색"
 categories: 
-    - binary search
+    - 알고리즘
 tag: [python,이진탐색,이분탐색,개념]
 toc: true
 toc_sticky: True
@@ -118,7 +118,7 @@ binary_search(arr,3,0,9)
 
 * ***bisect_right***(array, value) - 오른쪽 인덱스를 구하기.
 
-이 모듈의 함수를 활용해서 푼 문제  👉[[백준][python]10816번: 숫자 카드2](https://geunskoo.github.io/class2++/boj-10816/)
+이 모듈의 함수를 활용해서 푼 문제  👉[[백준][python]10816번: 숫자 카드2](https://geunskoo.github.io/알고리즘/boj-10816/)
 
 <br/>
 

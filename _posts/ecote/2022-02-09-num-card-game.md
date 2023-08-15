@@ -2,7 +2,7 @@
 layout: single
 title: "[이코테] 실전문제: 숫자 카드 게임"
 categories: 
-    - greedy
+    - 알고리즘
 tag: [python,greedy]
 toc: true
 toc_sticky: True

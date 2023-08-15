@@ -2,7 +2,7 @@
 layout: single
 title: "[이코테] 실전문제: 왕실의 나이트"
 categories: 
-    - implementation
+    - 알고리즘
 tag: [python,구현,이동]
 toc: true
 toc_sticky: True

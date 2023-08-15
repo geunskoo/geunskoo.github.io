@@ -1,4 +1,4 @@
-# main links
+#상단 메뉴바
 main:
   - title: "Category"
     url: /categories/
@@ -8,9 +8,3 @@ main:
     url: /search/
   - title: "About"
     url: https://geunskoo.github.io/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/

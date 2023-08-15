@@ -2,7 +2,7 @@
 layout: single
 title: "[이코테] 실전문제: 두 배열의 원소 교체"
 categories: 
-    - sort
+    - 알고리즘
 tag: [python,정렬]
 toc: true
 toc_sticky: True

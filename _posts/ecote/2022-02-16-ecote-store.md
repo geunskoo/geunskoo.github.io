@@ -2,7 +2,7 @@
 layout: single
 title: "[이코테] 실전문제: 부품 찾기"
 categories: 
-    - binary search
+    - 알고리즘
 tag: [python,이진탐색,이분탐색]
 toc: true
 toc_sticky: True

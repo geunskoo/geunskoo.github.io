@@ -4,27 +4,33 @@
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
   <ul class="nav__items" id="category_tag_menu">
-      <!--전체 글 수-->
       <li>
-            📚 <span style="font-family:'Cafe24Oneprettynight';">전체 게시글: </style> <span style="font-family:'Coming Soon';">{{sum}}</style> <span style="font-family:'Cafe24Oneprettynight';">개</style> 
+        <span style="font-family:'Cafe24Oneprettynight';">전체 게시글: </style> <span style="font-family:'Coming Soon';">{{sum}}</style> <span style="font-family:'Cafe24Oneprettynight';">개</style> 
       </li>
       <li>
-        <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C-->
-
-
-        <!-- 나의 이야기 -->
-        <span class="nav__sub-title">My story </span>
+        <!-- about -->
+        <span class="nav__sub-title">about </span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "small talk" %}
-                        <li><a href="/categories/smalltalk" class="">Small Talk ({{category[1].size}})</a></li>
+                    {% if category[0] == "about" %}
+                        <li><a href="/categories/about-me" class="">안녕하세요! ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        
+        <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C-->
+        <span class="nav__sub-title">기술 서적</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "객체지향" %}
+                        <li><a href="/categories/oop-book" class="">객체지향 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "book" %}
-                        <li><a href="/categories/kotlin" class="">Book ({{category[1].size}})</a></li>
+                    {% if category[0] == "클린 아키텍처" %}
+                        <li><a href="/categories/clean-architecture-book" class="">클린 아키텍처 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -32,122 +38,32 @@
         <span class="nav__sub-title">CS</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "OS" %}
-                        <li><a href="/categories/os" class="">OS ({{category[1].size}})</a></li>
+                    {% if category[0] == "운영체제" %}
+                        <li><a href="/categories/os" class="">운영체제 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Network" %}
-                        <li><a href="/categories/network" class="">Network ({{category[1].size}})</a></li>
+                    {% if category[0] == "네트워크" %}
+                        <li><a href="/categories/network" class="">네트워크 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Data Structure" %}
-                        <li><a href="/categories/datastructure" class="">Data Structure ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            
-
-        <!-- 안드로이드 -->
-        <span class="nav__sub-title">Android </span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "kotlin" %}
-                        <li><a href="/categories/kotlin" class="">Kotlin ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-
-
-        <!-- 알고리즘 -->
-        <span class="nav__sub-title">Basic Algorithm </span>
-
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "sort" %}
-                        <li><a href="/categories/sort" class="">[Basic] Sort ({{category[1].size}})</a></li>
+                    {% if category[0] == "자료구조" %}
+                        <li><a href="/categories/data-structure" class="">자료구조 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "greedy" %}
-                        <li><a href="/categories/greedy" class="">[Basic] Greedy ({{category[1].size}})</a></li>
+                    {% if category[0] == "알고리즘" %}
+                        <li><a href="/categories/algorithm" class="">알고리즘 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-            
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "DFS/BFS" %}
-                        <li><a href="/categories/dfsbfs" class="">[Basic] DFS/BFS ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "binary search" %}
-                        <li><a href="/categories/binary" class="">[Basic] BinarySearch ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "implementation" %}
-                        <li><a href="/categories/implementation" class="">[Basic] Implementation ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "dynamic programming" %}
-                        <li><a href="/categories/dynamic" class="">[Basic] DynamicProgramming ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Shortest path problem" %}
-                        <li><a href="/categories/shortest" class="">[Basic] ShortestPath ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "graph theory" %}
-                        <li><a href="/categories/graph" class="">[Basic] GraphTheory ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "class2++" %}
-                        <li><a href="/categories/class2" class="">[BOJ] class2++ ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "class3++" %}
-                        <li><a href="/categories/class3" class="">[BOJ] class3++ ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Programmers" %}
-                        <li><a href="/categories/programmers" class="">Programmers ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-       
-            
       </li>
   </ul>
 </nav>

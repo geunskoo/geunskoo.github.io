@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "[Data Structure] C++ Input 제대로 할줄 아니 ?"
+title: "알고리즘 테스트 준비를 위한 C++ 시스템 입력 방법 모음"
 categories: 
-    - Data Structure
+    - 자료구조
 tag: ['자료구조','Data Structure','C++']
 toc: true
 toc_sticky: True

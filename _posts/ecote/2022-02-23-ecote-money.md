@@ -2,7 +2,7 @@
 layout: single
 title: "[이코테] 실전문제: 효율적인 화폐 구성"
 categories: 
-    - dynamic programming
+    - 알고리즘
 tag: [python,다이나믹 프로그래밍]
 toc: true
 toc_sticky: True

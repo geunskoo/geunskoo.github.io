@@ -2,7 +2,7 @@
 layout: single
 title:  "[개념]기초 자료구조"
 categories: 
-    - DFS/BFS
+    - 알고리즘
 tag: [python,자료구조,개념]
 toc: true
 toc_sticky: True
